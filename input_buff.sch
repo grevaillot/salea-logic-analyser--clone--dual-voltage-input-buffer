@@ -8221,6 +8221,17 @@ Source: www.kingbright.com</description>
 <part name="LED1" library="led" deviceset="LED" device="3MM"/>
 <part name="R3" library="resistor" deviceset="R-EU_" device="M0805" value="NC"/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
+<part name="TP19" library="testpad" deviceset="TP" device="TP10R">
+<attribute name="TP_SIGNAL_NAME" value=""/>
+</part>
+<part name="TP20" library="testpad" deviceset="TP" device="TP10R">
+<attribute name="TP_SIGNAL_NAME" value=""/>
+</part>
+<part name="R4" library="resistor" deviceset="R-EU_" device="M0805" value="4.7k"/>
+<part name="TP21" library="testpad" deviceset="TP" device="TP10R">
+<attribute name="TP_SIGNAL_NAME" value=""/>
+</part>
+<part name="R5" library="resistor" deviceset="R-EU_" device="M0805" value="4.7k"/>
 </parts>
 <sheets>
 <sheet>
@@ -8295,6 +8306,11 @@ Source: www.kingbright.com</description>
 <instance part="LED1" gate="G$1" x="10.16" y="-10.16"/>
 <instance part="R3" gate="G$1" x="10.16" y="-22.86" rot="R90"/>
 <instance part="SUPPLY10" gate="GND" x="10.16" y="-35.56"/>
+<instance part="TP19" gate="G$1" x="20.32" y="-25.4"/>
+<instance part="TP20" gate="G$1" x="193.04" y="12.7" rot="R180"/>
+<instance part="R4" gate="G$1" x="193.04" y="22.86" rot="R90"/>
+<instance part="TP21" gate="G$1" x="203.2" y="12.7" rot="R180"/>
+<instance part="R5" gate="G$1" x="203.2" y="22.86" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -8375,6 +8391,18 @@ Source: www.kingbright.com</description>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <wire x1="10.16" y1="-7.62" x2="10.16" y2="-5.08" width="0.1524" layer="91"/>
 <label x="10.16" y="-5.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="193.04" y1="33.02" x2="193.04" y2="30.48" width="0.1524" layer="91"/>
+<label x="195.58" y="33.02" size="1.778" layer="95" rot="R90"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="193.04" y1="30.48" x2="193.04" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="203.2" y1="33.02" x2="203.2" y2="30.48" width="0.1524" layer="91"/>
+<label x="205.74" y="33.02" size="1.778" layer="95" rot="R90"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="203.2" y1="30.48" x2="203.2" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -8491,7 +8519,12 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
-<wire x1="10.16" y1="-27.94" x2="10.16" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-27.94" x2="10.16" y2="-30.48" width="0.1524" layer="91"/>
+<pinref part="TP19" gate="G$1" pin="TP"/>
+<wire x1="10.16" y1="-30.48" x2="10.16" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-30.48" x2="20.32" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="-30.48" x2="20.32" y2="-27.94" width="0.1524" layer="91"/>
+<junction x="10.16" y="-30.48"/>
 </segment>
 </net>
 <net name="OUT_0" class="0">
@@ -8722,6 +8755,20 @@ Source: www.kingbright.com</description>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="R3" gate="G$1" pin="2"/>
 <wire x1="10.16" y1="-15.24" x2="10.16" y2="-17.78" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="TP20" gate="G$1" pin="TP"/>
+<wire x1="193.04" y1="17.78" x2="193.04" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<pinref part="TP21" gate="G$1" pin="TP"/>
+<wire x1="203.2" y1="17.78" x2="203.2" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
