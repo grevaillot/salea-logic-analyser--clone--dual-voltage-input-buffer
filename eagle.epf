@@ -1,0 +1,24 @@
+[Eagle]
+Version="06 00 00"
+Platform="Mac OS X"
+Serial="62191E841E-LSR-WLM-1EL"
+Globals="Globals"
+Desktop="Desktop"
+
+[Globals]
+AutoSaveProject=1
+UsedLibrary="/Applications/EAGLE-6.0.0/lbr/analog-devices.lbr"
+UsedLibrary="/Applications/EAGLE/lbr/led.lbr"
+UsedLibrary="/Applications/EAGLE/lbr/resistor.lbr"
+UsedLibrary="/Users/moot/Developpement/00-Reprap/reup/untitled.lbr"
+UsedLibrary="input_buff.lbr"
+
+[Win_1]
+Type="Control Panel"
+Loc="819 22 1505 833"
+State=2
+Number=0
+
+[Desktop]
+Screen="1680 1050"
+Window="Win_1"
