@@ -8171,6 +8171,8 @@ Source: www.kingbright.com</description>
 <classes>
 <class number="0" name="default" width="0" drill="0">
 </class>
+<class number="1" name="power" width="0.254" drill="0">
+</class>
 </classes>
 <parts>
 <part name="U$3" library="input_buff" deviceset="SN74AVCH8T245" device=""/>
